@@ -73,14 +73,14 @@ button:
     name: Factory reset
 # "Display toggle" button
   - platform: template
-    name: ${friendly_name} Display Toggle
+    name: Display Toggle
     id: midea_display_toggle
     icon: mdi:theme-light-dark
     on_press:
       midea_ac.display_toggle:
 # "Swing step" button
   - platform: template
-    name: ${friendly_name} Swing Step
+    name: Swing Step
     id: midea_swing_step
     icon: mdi:tailwind
     on_press:
@@ -120,7 +120,7 @@ climate:
 #      - HORIZONTAL
 #      - BOTH
     outdoor_temperature:        # Optional. Outdoor temperature sensor (may display incorrect values after long inactivity).
-      name: ${friendly_name} Outdoor Temperature
+      name: Outdoor Temp
 #    power_usage:                # Optional. Power usage sensor (only for devices that support this feature).
 #      name: ${friendly_name} Power Usage
 #    humidity_setpoint:          # Optional. Indoor humidity sensor (only for devices that support this feature).
@@ -128,7 +128,7 @@ climate:
 
 switch:
   - platform: template
-    name: ${friendly_name} Beeper
+    name: Beeper
     id: midea_beeper
     icon: mdi:volume-source
     restore_mode: RESTORE_DEFAULT_OFF
@@ -156,14 +156,14 @@ sensor:
 #        temperature: !lambda "return x;"
 #        beeper: false
   - platform: wifi_signal
-    name: ${friendly_name} Wi-Fi Signal
+    name: Wi-Fi Signal
     update_interval: 60s
   - platform: uptime
     name: "Uptime"
     id: uptime_sec
     internal: true
   - platform: template
-    name: ${friendly_name} Uptime Days
+    name: Uptime Days
     lambda: |-
       return (id(uptime_sec).state/60)/60/24;
     icon: mdi:clock-start
