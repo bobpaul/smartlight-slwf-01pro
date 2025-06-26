@@ -88,7 +88,7 @@ button:
 
 climate:
   - platform: midea
-    name: ${friendly_name}                            # The value of "friendly_name" will be used here
+    name: None                                        # "friendly_name" is default
     id: midea_climate                           
     period: 1s                                        # Optional
     timeout: 2s                                       # Optional
