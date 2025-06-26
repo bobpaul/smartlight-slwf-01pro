@@ -103,18 +103,18 @@ climate:
       - FAN_ONLY                                      # This capability is always used.
       - HEAT_COOL               #on Window AC without heat, this maps to "Auto" which is more agressive about turning off the compressor
       - COOL
-#      - HEAT
+      - HEAT
       - DRY
     custom_fan_modes:
       - SILENT
-      - TURBO    #I don't think this does anything on my unit
+#      - TURBO    #I don't think this does anything on my unit
     supported_presets:          # All capabilities in this section detected by autoconf.
       - ECO
       - BOOST
       - SLEEP                   # This capability is always used.
 #      - ECO_SLEEP              # need this added; my units support both eco and sleep independently
-#    custom_presets:             # All capabilities in this section detected by autoconf.
-#      - FREEZE_PROTECTION
+    custom_presets:             # All capabilities in this section detected by autoconf.
+      - FREEZE_PROTECTION
     supported_swing_modes:
       - VERTICAL                # This capability is always used.
 #      - HORIZONTAL
